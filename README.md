@@ -67,7 +67,7 @@ Each session follows a simple rhythm: reconnect and recap, think through the pro
 
 **Topics:** integer paise, division and remainder, `map`, `filter`, `reduce`, sorting, separating positive and negative balances, and breaking an algorithm into functions.
 
-**Implement:** `splitAmount`, `fairShares`, `calculateBalances`, `settle`, and `formatRupees`; test against the supplied datasets.
+**Implement:** `splitAmount`, `fairShares`, `calculateBalances`, and `settle`; run `node --test` to check them against the supplied datasets, and switch on the automatic GitHub checks (see [Check your logic](#check-your-logic)).
 
 **Outcome:** explain why a person may owe or receive money, calculate net balances, and trace each suggested transfer. Our greedy settlement is designed to reduce the number of payments, but it does not guarantee the mathematically smallest possible number in every case.
 
@@ -75,7 +75,7 @@ Each session follows a simple rhythm: reconnect and recap, think through the pro
 
 **Topics:** HTML forms, CSS layout, DOM selection, event listeners, form handling, state, rendering, and validation feedback.
 
-**Implement:** an interface to add expenses and participants, show the expense list and balances, and display suggested settlements.
+**Implement:** an interface to add expenses and participants, show the expense list and balances, and display suggested settlements. Add `formatRupees` in `js/ui.js` to show paise as rupees (for example, `33334` → `₹333.34`).
 
 **Outcome:** enter an expense through the UI and explain how the event triggers validation, calculation, and a page update.
 
@@ -139,6 +139,33 @@ GitHub's [Codespaces quickstart](https://docs.github.com/en/codespaces/quickstar
 - [ ] I will ask for help when stuck instead of silently falling behind.
 - [ ] I will test my code and explain what I changed.
 - [ ] I understand the AI rules below.
+
+## Getting started
+
+### Your repository
+
+The trainer creates a repository for you in the bootcamp organization, named `expense-splitter-<your-github-username>`, and gives you write access. Watch your email for the GitHub invitation and click **Accept**. All your work goes into this repository.
+
+### Open it in GitHub Codespaces
+
+1. Open your repository on GitHub.
+2. Select **Code** → **Codespaces** → **Create codespace on main**.
+3. Wait for the browser-based VS Code editor to open. The first launch can take a couple of minutes.
+4. Open the terminal from **Terminal → New Terminal**.
+5. Run `npm run dev` to start the preview server.
+6. Codespaces should forward port `5173` and open the preview. If it doesn't, open the **Ports** panel and click the forwarded port.
+7. Keep that terminal running while you work. Stop the server with `Ctrl+C`.
+
+At the end of each day, stop your codespace (**Code → Codespaces → ⋯ → Stop codespace**) so it doesn't use up your free monthly hours. Your work is safe as long as you've committed and pushed it.
+
+Don't install extra packages or change the project setup without checking with the trainer first.
+
+### Check your logic
+
+The tests in `tests/` check `js/logic.js` against the datasets you solve on paper. A function that still says `TODO` is skipped, not failed.
+
+- **In Codespaces:** open a second terminal (the first one is running the preview) and run `node --test`.
+- **On GitHub (from Day 2):** switch on automatic checks by removing the `#` in front of the two `push` lines in `.github/workflows/check.yml`, then commit and push. From then on, every push shows a green tick or a red cross next to your commit.
 
 ## How we will use AI
 
