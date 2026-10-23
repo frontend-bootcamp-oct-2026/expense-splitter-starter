@@ -4,6 +4,7 @@
   "type": "module",
   "description": "Group Expense Splitter — Frontend Problem-Solving Bootcamp, Oct 2026",
   "scripts": {
+    "dev": "npx --yes vite@6.4.5 --host 0.0.0.0",
     "test": "node --test"
   }
 }
