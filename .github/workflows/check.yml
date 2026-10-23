@@ -1,0 +1,23 @@
+name: Logic checks
+
+# Day 2 afternoon: remove the "#" in front of the two "push" lines below,
+# commit, and push. From then on, every push runs the checks and shows
+# a green tick or a red cross next to your commit.
+on:
+  workflow_dispatch:
+  # push:
+  #   branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Run the logic tests
+        run: node --test

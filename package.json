@@ -1,0 +1,9 @@
+{
+  "name": "expense-splitter",
+  "private": true,
+  "type": "module",
+  "description": "Group Expense Splitter — Frontend Problem-Solving Bootcamp, Oct 2026",
+  "scripts": {
+    "test": "node --test"
+  }
+}
