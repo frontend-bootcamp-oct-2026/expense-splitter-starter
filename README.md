@@ -10,13 +10,13 @@ Built during the Frontend Problem-Solving Bootcamp, October 2026.
 
 1. Open your assigned repository in the bootcamp organization.
 2. Select **Code** → **Codespaces** → **Create codespace on main**.
-3. Wait for the browser-based VS Code editor to open.
+3. Wait for the browser-based VS Code editor to open. The first launch may take a little time while the environment is prepared.
 4. Open the terminal from **Terminal → New Terminal**.
 5. Run `npm run dev` to start the preview server.
-6. When Codespaces shows that port `5173` is available, open the forwarded port in your browser.
-7. Keep the terminal running while you work. Stop the process with `Ctrl+C`.
+6. Codespaces should forward port `5173` and open the preview. If it does not, open the **Ports** panel and click the forwarded port.
+7. Keep the terminal running while you work. Stop the server with `Ctrl+C`.
 
-If this repository's starter setup does not yet have the `dev` script, ask the trainer before changing project configuration. Don't install random packages or change the setup on your own.
+Don't install extra packages or change the project setup without checking with the trainer first.
 
 ## How we work
 
@@ -47,7 +47,7 @@ Your commit history is how you (and your trainer) see your progress.
 The tests in `tests/` check `js/logic.js` against the datasets you solved on paper. A function that still says `TODO` is skipped, not failed.
 
 - **In Codespaces:** run `node --test` in the terminal.
-- **On GitHub:** from Day 2 afternoon, every push runs the checks automatically (see `.github/workflows/check.yml`).
+- **On GitHub:** on Day 2 afternoon, you'll enable automatic checks by uncommenting the `push` lines in `.github/workflows/check.yml`, then committing and pushing that change.
 
 ## Files
 
