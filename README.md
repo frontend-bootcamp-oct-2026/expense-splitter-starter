@@ -2,7 +2,7 @@
 
 A group goes on a trip. Different people pay for different things. This app works out who owes whom and suggests a settlement using as few payments as our greedy approach can manage.
 
-Built during the **Frontend Problem-Solving Bootcamp**, October 26–31, 2026.
+Built during the **Frontend Problem-Solving Bootcamp**.
 
 ## What problem are we solving?
 
@@ -55,7 +55,7 @@ We meet **three times per day online**, for one-hour Google Meet sessions in the
 
 Each session follows a simple rhythm: reconnect and recap, think through the problem, build a small piece, test and explain it, then record a checkpoint.
 
-### Day 1 — Monday, October 26: Understand the problem and model the data
+### Day 1: Understand the problem and model the data
 
 **Topics:** problem decomposition, variables, numbers, operators, conditions, functions, arrays, objects, loops, and basic validation.
 
@@ -63,7 +63,7 @@ Each session follows a simple rhythm: reconnect and recap, think through the pro
 
 **Outcome:** explain the expense data model, validate a basic expense, and calculate how much each person paid.
 
-### Day 2 — Tuesday, October 27: Fair shares, balances, and settlement logic
+### Day 2: Fair shares, balances, and settlement logic
 
 **Topics:** integer paise, division and remainder, `map`, `filter`, `reduce`, sorting, separating positive and negative balances, and breaking an algorithm into functions.
 
@@ -71,7 +71,7 @@ Each session follows a simple rhythm: reconnect and recap, think through the pro
 
 **Outcome:** explain why a person may owe or receive money, calculate net balances, and trace each suggested transfer. Our greedy settlement is designed to reduce the number of payments, but it does not guarantee the mathematically smallest possible number in every case.
 
-### Day 3 — Wednesday, October 28: Connect JavaScript to the webpage
+### Day 3: Connect JavaScript to the webpage
 
 **Topics:** HTML forms, CSS layout, DOM selection, event listeners, form handling, state, rendering, and validation feedback.
 
@@ -79,7 +79,7 @@ Each session follows a simple rhythm: reconnect and recap, think through the pro
 
 **Outcome:** enter an expense through the UI and explain how the event triggers validation, calculation, and a page update.
 
-### Day 4 — Thursday, October 29: Save data and handle edge cases
+### Day 4: Save data and handle edge cases
 
 **Topics:** JSON, `localStorage`, try/catch, testing, debugging, and changing existing behaviour safely.
 
@@ -87,7 +87,7 @@ Each session follows a simple rhythm: reconnect and recap, think through the pro
 
 **Outcome:** refresh the page without losing saved trip data, explain what happens when input is invalid, and demonstrate tests for important cases.
 
-### Day 5 — Friday, October 30: Prepare and publish the application
+### Day 5: Prepare and publish the application
 
 **Topics:** final integration, regression testing, Git commits, deployment, project documentation, and explaining technical decisions.
 
@@ -95,7 +95,7 @@ Each session follows a simple rhythm: reconnect and recap, think through the pro
 
 **Outcome:** share a working application and explain how the main pieces fit together.
 
-### Day 6 — Saturday, October 31: Independent problem-solving and demos
+### Day 6: Independent problem-solving and demos
 
 **Topics:** reading a new requirement, planning before coding, modifying existing logic, testing, debugging, and communicating trade-offs.
 
@@ -186,7 +186,7 @@ Google Sheets sync is a stretch goal, not a requirement for the core application
 5. **Commit working milestones:** use messages that describe what works, for example `totalPaid passes Dataset 2`.
 6. **Explain your work:** if you use code, you should be able to tell us what it does and why.
 
-## Day 5 README handover
+## Final README handover
 
 Before your final demo, make sure your project README includes:
 
@@ -200,4 +200,4 @@ Before your final demo, make sure your project README includes:
 - Known limitations
 - How to run the project
 
-**By the end of Saturday, the goal is not only a deployed expense splitter. It is a student who can explain the problem, reason about the solution, test it, and make a meaningful change independently.**
+**By the end of the bootcamp, the goal is not only a deployed expense splitter. It is a student who can explain the problem, reason about the solution, test it, and make a meaningful change independently.**
