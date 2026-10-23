@@ -1,0 +1,21 @@
+{
+  "name": "Expense Splitter Bootcamp",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-22-bookworm",
+  "forwardPorts": [
+    5173
+  ],
+  "portsAttributes": {
+    "5173": {
+      "label": "Expense Splitter preview",
+      "onAutoForward": "openBrowser"
+    }
+  },
+  "customizations": {
+    "codespaces": {
+      "openFiles": [
+        "README.md",
+        "index.html"
+      ]
+    }
+  }
+}
