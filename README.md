@@ -1,76 +1,203 @@
-# Expense Splitter
+# Expense Splitter Bootcamp
 
-A group goes on a trip. Different people pay for different things. This app works out who owes whom and settles it in as few payments as possible.
+A group goes on a trip. Different people pay for different things. This app works out who owes whom and suggests a settlement using as few payments as our greedy approach can manage.
 
-Built during the Frontend Problem-Solving Bootcamp, October 2026.
+Built during the **Frontend Problem-Solving Bootcamp**, October 26–31, 2026.
 
-> **On Day 5, replace this README with your own.** The section list at the bottom shows what to include.
+## What problem are we solving?
 
-## Start in the browser with GitHub Codespaces
+Imagine six friends on a trip. One pays for the hotel, another pays for lunch, and someone else pays for fuel. Some costs are shared by everyone; others are shared only by a few people.
 
-1. Open your assigned repository in the bootcamp organization.
-2. Select **Code** → **Codespaces** → **Create codespace on main**.
-3. Wait for the browser-based VS Code editor to open. The first launch may take a little time while the environment is prepared.
-4. Open the terminal from **Terminal → New Terminal**.
-5. Run `npm run dev` to start the preview server.
-6. Codespaces should forward port `5173` and open the preview. If it does not, open the **Ports** panel and click the forwarded port.
-7. Keep the terminal running while you work. Stop the server with `Ctrl+C`.
+At the end, the group needs to answer:
 
-Don't install extra packages or change the project setup without checking with the trainer first.
+- How much did each person pay?
+- What was each person's fair share?
+- Who should receive money, and who still owes money?
+- How can we settle the balances with fewer transfers?
+- What happens when an expense is invalid or cannot be split evenly?
 
-## How we work
+We will build a web application that lets us add people and expenses, see balances, calculate suggested payments, save the trip in the browser, and publish the result online.
 
-1. **Paper first.** Solve it by hand before you write code.
-2. **Comments before code.** Write the steps in plain English, then the JavaScript.
-3. **Build small.** One function at a time, tested in the console before you move on.
-4. **The 10-minute rule.** Stuck for 10 minutes? Ask. Not after an hour.
+**Our learning approach:** start with a real problem, understand it in plain English, write down the steps, implement one small piece, test it, and explain why it works. We are not learning concepts in isolation and looking for an example afterward. We learn each concept when the problem needs it.
 
-## AI rules
+## How web technologies help us solve it
 
-- **`js/logic.js` is yours.** AI can explain a concept or an error message, but it doesn't write these functions.
-- **Everywhere else,** AI can help, as long as you can explain every line you keep.
-- **Log it.** Add a line to `ai-log.md` each time you use AI: what you asked, what you kept, what you changed.
-- **Can't explain a line?** Then it isn't your line yet. Delete it and write it again.
-
-## Commit rule
-
-Commit every time a function works, with a message that says what works:
-
-```
-totalPaid passes Dataset 2
-```
-
-Your commit history is how you (and your trainer) see your progress.
-
-## Check your logic
-
-The tests in `tests/` check `js/logic.js` against the datasets you solved on paper. A function that still says `TODO` is skipped, not failed.
-
-- **In Codespaces:** run `node --test` in the terminal.
-- **On GitHub:** on Day 2 afternoon, you'll enable automatic checks by uncommenting the `push` lines in `.github/workflows/check.yml`, then committing and pushing that change.
-
-## Files
-
-| File | What goes in it | Day |
+| Technology / concept | Why the problem needs it | What we will implement |
 | --- | --- | --- |
-| `js/logic.js` | All calculations. No DOM. | 1–2 |
-| `js/ui.js` | Rendering and click handlers | 3 |
-| `js/storage.js` | Saving in the browser | 4 |
-| `js/api.js` | Syncing with the Google Sheet | 4 |
-| `js/main.js` | Starts the app | 1 |
-| `warmups/` | Daily recap exercises | 1–5 |
-| `ai-log.md` | Your AI log | 1–5 |
+| HTML: forms, labels, inputs, buttons, lists | People need a clear way to enter and review information | Expense form, payer selector, participant choices, expense list, balances and settlements |
+| CSS: selectors, box model, Flexbox, spacing, responsive layout | Information should be readable and usable on different screen sizes | Style the form, expense list, balance summaries, and settlement suggestions |
+| JavaScript variables, numbers, operators | We must represent amounts and perform calculations | Store amounts in integer paise; calculate totals and shares |
+| Arrays and objects | A trip contains multiple people and multiple expenses, each with its own details | Model participants and expenses using arrays and objects |
+| Conditions and validation | Real users can submit missing, invalid, or inconsistent data | Validate amounts, payer, participants, and sharers; handle empty and unusual cases |
+| Functions and decomposition | Each calculation should have one clear responsibility and be testable | Implement `validateExpense`, `totalPaid`, `splitAmount`, `fairShares`, `calculateBalances`, `settle`, and `formatRupees` |
+| Loops and array methods (`map`, `filter`, `reduce`, sorting) | We need to process many expenses and separate people who owe money from people who should receive it | Aggregate totals, calculate balances, and prepare creditors and debtors |
+| Integer division and remainder | Some amounts do not divide equally into whole paise | Split remainders consistently without losing money |
+| DOM selection, events, state and rendering | The calculation needs to respond to user actions in the webpage | Handle form submissions, update app state, and render the latest expenses and results |
+| JSON and `localStorage` | Refreshing the page should not erase the trip | Save and restore participants and expenses, with basic error handling |
+| Testing and debugging | A plausible-looking answer can still be wrong | Run tests, check edge cases, inspect errors, and verify that balances sum to zero |
+| GitHub, commits and deployment | We need a record of progress and a shareable working application | Commit working milestones and publish the app with GitHub Pages |
+| AI-assisted learning | AI can help explain unfamiliar concepts, but should not replace our thinking | Ask for explanations or debugging hints, log AI usage, and explain every line of AI-assisted code |
 
----
+### A small example
 
-## Your Day 5 README should cover
+Asha pays ₹900 for a hotel shared equally by Asha, Ravi, and Mina.
+
+- Fair share: ₹900 ÷ 3 = ₹300 per person.
+- Asha paid ₹900 and used ₹300 of the benefit, so Asha should receive ₹600 overall.
+- Ravi owes ₹300 to Asha.
+- Mina owes ₹300 to Asha.
+
+This one situation gives us a reason to use variables, arrays and objects, arithmetic, functions, and eventually DOM rendering. We will then make the example more realistic by adding more expenses, different groups of sharers, invalid input, and remainder paise.
+
+## Six-day learning and implementation plan
+
+We meet **three times per day online**, for one-hour Google Meet sessions in the morning, afternoon, and evening. The exact meeting links and timings will be shared separately.
+
+Each session follows a simple rhythm: reconnect and recap, think through the problem, build a small piece, test and explain it, then record a checkpoint.
+
+### Day 1 — Monday, October 26: Understand the problem and model the data
+
+**Topics:** problem decomposition, variables, numbers, operators, conditions, functions, arrays, objects, loops, and basic validation.
+
+**Implement:** represent participants and expenses; write and test the first small logic functions, including `validateExpense` and `totalPaid`.
+
+**Outcome:** explain the expense data model, validate a basic expense, and calculate how much each person paid.
+
+### Day 2 — Tuesday, October 27: Fair shares, balances, and settlement logic
+
+**Topics:** integer paise, division and remainder, `map`, `filter`, `reduce`, sorting, separating positive and negative balances, and breaking an algorithm into functions.
+
+**Implement:** `splitAmount`, `fairShares`, `calculateBalances`, `settle`, and `formatRupees`; test against the supplied datasets.
+
+**Outcome:** explain why a person may owe or receive money, calculate net balances, and trace each suggested transfer. Our greedy settlement is designed to reduce the number of payments, but it does not guarantee the mathematically smallest possible number in every case.
+
+### Day 3 — Wednesday, October 28: Connect JavaScript to the webpage
+
+**Topics:** HTML forms, CSS layout, DOM selection, event listeners, form handling, state, rendering, and validation feedback.
+
+**Implement:** an interface to add expenses and participants, show the expense list and balances, and display suggested settlements.
+
+**Outcome:** enter an expense through the UI and explain how the event triggers validation, calculation, and a page update.
+
+### Day 4 — Thursday, October 29: Save data and handle edge cases
+
+**Topics:** JSON, `localStorage`, try/catch, testing, debugging, and changing existing behaviour safely.
+
+**Implement:** save and restore the trip; test empty, zero, negative, malformed, and uneven amounts, missing sharers, and other edge cases. Start an individual feature variation where time allows.
+
+**Outcome:** refresh the page without losing saved trip data, explain what happens when input is invalid, and demonstrate tests for important cases.
+
+### Day 5 — Friday, October 30: Prepare and publish the application
+
+**Topics:** final integration, regression testing, Git commits, deployment, project documentation, and explaining technical decisions.
+
+**Implement:** fix key defects, verify the full user flow, deploy with GitHub Pages, and update the project README with the demo link, data model, calculations, limitations, and AI usage.
+
+**Outcome:** share a working application and explain how the main pieces fit together.
+
+### Day 6 — Saturday, October 31: Independent problem-solving and demos
+
+**Topics:** reading a new requirement, planning before coding, modifying existing logic, testing, debugging, and communicating trade-offs.
+
+**Implement:** an individual change or challenge, then demonstrate and explain the result. Possible challenges include a percentage split, excluding a participant, recording repayments, or changing settlement preferences.
+
+**Outcome:** show what you can solve independently, explain your approach, test a new case, and identify what you would improve next.
+
+## Preparation checklist
+
+Please complete these items before Monday. You do **not** need to master every JavaScript topic before the bootcamp; this checklist is to make sure you can join and start.
+
+### Accounts and access
+
+- [ ] I can sign in to my own GitHub account.
+- [ ] I have submitted my correct GitHub username through the registration form.
+- [ ] I can join Google Meet using my Google account.
+- [ ] I can access the individual project repository shared by the trainer.
+
+### Laptop and browser-based environment
+
+- [ ] I have a laptop or desktop and a reliable internet connection.
+- [ ] I can open the project repository in my browser.
+- [ ] I have tried creating/opening a GitHub Codespace for my assigned repository, if repository access has been provided.
+- [ ] In the Codespaces terminal, I can run `npm run dev` and open the forwarded preview port.
+- [ ] I know how to share my screen during a Google Meet session.
+
+GitHub's [Codespaces quickstart](https://docs.github.com/en/codespaces/quickstart) explains the browser-based editor, running an application, and opening its forwarded port. If setup fails, contact the trainer before the first session rather than spending hours stuck alone.
+
+### JavaScript revision
+
+- [ ] I have revised variables, numbers, and basic arithmetic.
+- [ ] I can read a simple `if/else` condition.
+- [ ] I understand what a function takes as input and returns as output.
+- [ ] I have revised arrays, objects, and loops.
+- [ ] I am willing to write the steps in plain English before writing code.
+
+### Schedule and learning mindset
+
+- [ ] I have kept time for all three one-hour sessions each day.
+- [ ] I will try the problem before asking for a complete solution.
+- [ ] I will ask for help when stuck instead of silently falling behind.
+- [ ] I will test my code and explain what I changed.
+- [ ] I understand the AI rules below.
+
+## How we will use AI
+
+- **Core calculation logic in `js/logic.js` is yours.** AI may explain a concept or an error message, but it should not write these functions for you.
+- For HTML and CSS, AI can help, but you must be able to explain every line you keep.
+- Record each AI interaction in `ai-log.md`: what you asked, what you kept, and what you changed.
+- If you cannot explain a line, pause and work through it before keeping it.
+- The goal is not to avoid AI. The goal is to use it without giving away your thinking.
+
+## How we will measure progress
+
+We will look at evidence, not just the number of commits or how fast someone types.
+
+At checkpoints, the trainer will note whether you can:
+
+1. Explain the problem and propose an approach.
+2. Implement a small function with appropriate guidance.
+3. Test the function and debug a failure.
+4. Explain your code in your own words.
+5. Apply the idea to a new example or requirement.
+
+It is okay to need guidance at first. We want to see progress toward solving and explaining more independently.
+
+## Project files
+
+| File / folder | Purpose | Planned focus |
+| --- | --- | --- |
+| `js/logic.js` | Pure calculations and validation; no DOM | Days 1–2 |
+| `js/ui.js` | Rendering and event handlers | Day 3 |
+| `js/storage.js` | Saving and restoring trip data | Day 4 |
+| `js/api.js` | Optional Google Sheets sync, if time allows | Stretch |
+| `js/main.js` | Starts and connects the app | Across the project |
+| `tests/` | Checks logic against datasets and expected behaviour | Days 1–4 |
+| `warmups/` | Short daily recap exercises | Days 1–5 |
+| `ai-log.md` | Record of AI usage and decisions | Days 1–5 |
+
+Google Sheets sync is a stretch goal, not a requirement for the core application. We will prioritise correct calculations, a usable interface, persistence, testing, and deployment.
+
+## Working agreements
+
+1. **Paper first:** solve a small example by hand before coding.
+2. **Comments before code:** write the steps in plain English, then translate them into JavaScript.
+3. **Build small:** implement and test one function at a time.
+4. **Ask early:** if you have been stuck for 10 minutes, ask for help.
+5. **Commit working milestones:** use messages that describe what works, for example `totalPaid passes Dataset 2`.
+6. **Explain your work:** if you use code, you should be able to tell us what it does and why.
+
+## Day 5 README handover
+
+Before your final demo, make sure your project README includes:
 
 - Live demo link
 - What the app does
-- How the balances are calculated
-- How the settlement works, and when it isn't the minimum
+- How balances are calculated
+- How settlement works, including its limitations
 - Data model
-- Your personal feature
+- Your individual feature
 - How you used AI
-- Limitations
-- How to run it
+- Known limitations
+- How to run the project
+
+**By the end of Saturday, the goal is not only a deployed expense splitter. It is a student who can explain the problem, reason about the solution, test it, and make a meaningful change independently.**
