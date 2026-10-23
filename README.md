@@ -1,13 +1,22 @@
 # Expense Splitter
 
-A group goes on a trip. Different people pay for different things.
-This app works out who owes whom, and settles it in as few payments as possible.
+A group goes on a trip. Different people pay for different things. This app works out who owes whom and settles it in as few payments as possible.
 
 Built during the Frontend Problem-Solving Bootcamp, October 2026.
 
 > **On Day 5, replace this README with your own.** The section list at the bottom shows what to include.
 
----
+## Start in the browser with GitHub Codespaces
+
+1. Open your assigned repository in the bootcamp organization.
+2. Select **Code** → **Codespaces** → **Create codespace on main**.
+3. Wait for the browser-based VS Code editor to open.
+4. Open the terminal from **Terminal → New Terminal**.
+5. Run `npm run dev` to start the preview server.
+6. When Codespaces shows that port `5173` is available, open the forwarded port in your browser.
+7. Keep the terminal running while you work. Stop the process with `Ctrl+C`.
+
+If this repository's starter setup does not yet have the `dev` script, ask the trainer before changing project configuration. Don't install random packages or change the setup on your own.
 
 ## How we work
 
@@ -33,17 +42,11 @@ totalPaid passes Dataset 2
 
 Your commit history is how you (and your trainer) see your progress.
 
-## Run it
-
-Open the folder in VS Code, right-click `index.html`, then **Open with Live Server**.
-Double-clicking the file won't work, because the JavaScript files are modules.
-
 ## Check your logic
 
-The tests in `tests/` check `js/logic.js` against the datasets you solved on paper.
-A function that still says `TODO` is skipped, not failed.
+The tests in `tests/` check `js/logic.js` against the datasets you solved on paper. A function that still says `TODO` is skipped, not failed.
 
-- **On your laptop (needs Node.js):** run `node --test` in the terminal.
+- **In Codespaces:** run `node --test` in the terminal.
 - **On GitHub:** from Day 2 afternoon, every push runs the checks automatically (see `.github/workflows/check.yml`).
 
 ## Files
@@ -70,4 +73,4 @@ A function that still says `TODO` is skipped, not failed.
 - Your personal feature
 - How you used AI
 - Limitations
-- How to run it locally
+- How to run it
