@@ -105,43 +105,12 @@ Each session follows a simple rhythm: reconnect and recap, think through the pro
 
 ## Preparation checklist
 
-- Start with the [Student Preparation Checklist](PREPARATION-CHECKLIST.md) to check your accounts, setup, and readiness.
-- Use the [HTML, CSS and JavaScript Preparation Topics Guide](PREPARATION-TOPICS-GUIDE.md) to revise the core basics with examples and explanations.
+Please complete these before Day 1. You do **not** need to master every topic before the bootcamp; the aim is to make sure you can join and start.
 
-Please complete these items before Day 1. You do **not** need to master every JavaScript topic before the bootcamp; this checklist is to make sure you can join and start.
+1. **[Student Preparation Checklist](PREPARATION-CHECKLIST.md)** — accounts, Codespaces, a test commit and push, the topics to revise, and a final readiness check.
+2. **[HTML, CSS and JavaScript Preparation Topics Guide](PREPARATION-TOPICS-GUIDE.md)** — the core basics with examples you can run, starting with where to run them.
 
-### Accounts and access
-
-- [ ] I can sign in to my own GitHub account.
-- [ ] I have submitted my correct GitHub username through the registration form.
-- [ ] I can join Google Meet using my Google account.
-- [ ] I can access the individual project repository shared by the trainer.
-
-### Laptop and browser-based environment
-
-- [ ] I have a laptop or desktop and a reliable internet connection.
-- [ ] I can open the project repository in my browser.
-- [ ] I have tried creating/opening a GitHub Codespace for my assigned repository, if repository access has been provided.
-- [ ] In the Codespaces terminal, I can run `npm run dev` and open the forwarded preview port.
-- [ ] I know how to share my screen during a Google Meet session.
-
-GitHub's [Codespaces quickstart](https://docs.github.com/en/codespaces/quickstart) explains the browser-based editor, running an application, and opening its forwarded port. If setup fails, contact the trainer before the first session rather than spending hours stuck alone.
-
-### JavaScript revision
-
-- [ ] I have revised variables, numbers, and basic arithmetic.
-- [ ] I can read a simple `if/else` condition.
-- [ ] I understand what a function takes as input and returns as output.
-- [ ] I have revised arrays, objects, and loops.
-- [ ] I am willing to write the steps in plain English before writing code.
-
-### Schedule and learning mindset
-
-- [ ] I have kept time for all three one-hour sessions each day.
-- [ ] I will try the problem before asking for a complete solution.
-- [ ] I will ask for help when stuck instead of silently falling behind.
-- [ ] I will test my code and explain what I changed.
-- [ ] I understand the AI rules below.
+If setup fails, contact the trainer before the first session rather than spending hours stuck alone.
 
 ## Getting started
 
@@ -159,7 +128,7 @@ The trainer creates a repository for you in the bootcamp organization, named `ex
 6. Codespaces should forward port `5173` and open the preview. If it doesn't, open the **Ports** panel and click the forwarded port.
 7. Keep that terminal running while you work. Stop the server with `Ctrl+C`.
 
-At the end of each day, stop your codespace (**Code → Codespaces → ⋯ → Stop codespace**) so it doesn't use up your free monthly hours. Your work is safe as long as you've committed and pushed it.
+At the end of each day, stop your codespace (**Code → Codespaces → ⋯ → Stop codespace**) so it doesn't use up your free monthly hours. Your work is safe as long as you've committed and pushed it. If you haven't done that before, see [Save your work: Git in Codespaces](PREPARATION-TOPICS-GUIDE.md#5-save-your-work-git-in-codespaces).
 
 Don't install extra packages or change the project setup without checking with the trainer first.
 
