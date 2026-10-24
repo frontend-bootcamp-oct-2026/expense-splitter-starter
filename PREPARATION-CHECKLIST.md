@@ -3,7 +3,7 @@
 **Project:** Group Expense Splitter  
 **Goal:** Build a working application by solving a real-world problem using HTML, CSS, and JavaScript.
 
-You do not need to know everything before joining. Use this checklist to get ready to learn and build with confidence.
+You do not need to know everything before joining. Use this checklist to get ready to learn and build with confidence. For beginner-friendly explanations and examples, work through the [HTML, CSS and JavaScript Preparation Topics Guide](PREPARATION-TOPICS-GUIDE.md).
 
 ## 1. Accounts and access
 
