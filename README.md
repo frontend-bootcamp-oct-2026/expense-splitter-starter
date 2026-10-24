@@ -105,7 +105,7 @@ Each session follows a simple rhythm: reconnect and recap, think through the pro
 
 ## Preparation checklist
 
-Please complete these items before Day 1. You do **not** need to master every JavaScript topic before the bootcamp; this checklist is to make sure you can join and start.
+For the standalone student checklist, see [Student Preparation Checklist](PREPARATION-CHECKLIST.md). Please complete these items before Day 1. You do **not** need to master every JavaScript topic before the bootcamp; this checklist is to make sure you can join and start.
 
 ### Accounts and access
 
