@@ -1,6 +1,5 @@
 # Student Preparation Checklist
 
-**Bootcamp starts:** Monday, October 26, 2026  
 **Project:** Group Expense Splitter  
 **Goal:** Build a working application by solving a real-world problem using HTML, CSS, and JavaScript.
 
@@ -64,7 +63,7 @@ You do not need to solve every case now. Come prepared to discuss your approach.
 
 ## 6. Final readiness check
 
-Before Monday, confirm the following:
+Before the first session, confirm the following:
 
 - [ ] My accounts and development environment are ready.
 - [ ] I have revised the basic JavaScript concepts.
